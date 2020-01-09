@@ -10,7 +10,7 @@
         <!--To Do List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ToDoListViewController" customModule="TodoList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ToDoListViewController" customModule="ToDoApp_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,7 +68,7 @@
         <!--Add Task View Controller-->
         <scene sceneID="4zj-po-32E">
             <objects>
-                <viewController id="Xu4-Sk-1d2" customClass="AddTaskViewController" customModule="TodoList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xu4-Sk-1d2" customClass="AddTaskViewController" customModule="ToDoApp_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2OX-u0-xO0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,7 +198,7 @@
         <!--To Do Details View Controller-->
         <scene sceneID="vfs-sm-CMQ">
             <objects>
-                <viewController id="k7o-Ai-0d8" customClass="ToDoDetailsViewController" customModule="TodoList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="k7o-Ai-0d8" customClass="ToDoDetailsViewController" customModule="ToDoApp_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gCe-Kk-PIi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -259,7 +259,7 @@
                         <outlet property="taskCompletionButton" destination="IUW-62-rfo" id="5ci-zc-gS6"/>
                         <outlet property="taskCompletionDate" destination="K7f-UY-Xi0" id="DaW-SN-1aR"/>
                         <outlet property="taskDetailsTextView" destination="Nna-6i-cZh" id="f2H-rw-6WR"/>
-                        <outlet property="taskTitleLabel" destination="htj-FQ-4rl" id="b7v-YQ-JXO"/>
+                        <outlet property="taskTitleLabel" destination="htj-FQ-4rl" id="5R7-KQ-ohI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Na-vU-YPr" userLabel="First Responder" sceneMemberID="firstResponder"/>

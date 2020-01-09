@@ -20,7 +20,10 @@ class ToDoListViewController: UIViewController , UITableViewDataSource,UITableVi
     
     @IBOutlet weak var tableView: UITableView!
 
-   var toDOItems : [ToDoItemModel] = [ToDoItemModel] ()
+     var toDoItems: [ToDoItem] = [ToDoItem]()
+    
+    var selectedItem : ToDoItem?
+    
         
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -33,26 +36,29 @@ class ToDoListViewController: UIViewController , UITableViewDataSource,UITableVi
             
             title = "To Do List"
             
-            let testItem = ToDoItemModel(name: "Test Item", details: "Test", completionDate: Date())
+            let testItem = ToDoItem(name: "Test Item", details: "Test Details", completionDate: Date())
             
-            self.toDOItems.append(testItem)
+            self.toDoItems.append(testItem)
             
-        
+            
             
         }
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            performSegue(withIdentifier: "TaskDetailsSegue", sender: nil)
+            
+            self.selectedItem = toDoItems[indexPath.row]
+            
+            performSegue(withIdentifier: "TaskDetailsSegue", sender: selectedItem)
         }
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return toDOItems.count
+            return toDoItems.count
         
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
-            let toDoItem = toDOItems[indexPath.row]
+            let toDoItem = toDoItems[indexPath.row]
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItem")!
             
@@ -64,15 +70,20 @@ class ToDoListViewController: UIViewController , UITableViewDataSource,UITableVi
         }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
+        if segue.identifier == "TaskDetailsSegue" {
+            
+            guard let destinationVC =  segue.destination as? ToDoDetailsViewController else { return }
+            
+            guard let toDOItem = sender as? ToDoItem else {return}
+            
+             destinationVC.toDoItem = toDOItem
+        }
+    }
     
     
     }
    
-    
-    
-    
-}
+
 
         
         

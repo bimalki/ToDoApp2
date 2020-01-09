@@ -16,7 +16,7 @@
 
 import Foundation
 
-struct ToDoItemModel {
+struct ToDoItem {
     
     var name: String
     
@@ -28,18 +28,20 @@ struct ToDoItemModel {
     
     var isComplete: Bool
     
-    init(name: String, details: String, completionDate:  Date) {
+    init(name: String, details: String, completionDate: Date) {
+        
         self.name = name
         
-        self.details = name
+        self.details = details
         
         self.completionDate = completionDate
         
         self.isComplete = false
         
-        self.startDate =  Date()
+        self.startDate = Date()
         
     }
+    
 }
 
 
